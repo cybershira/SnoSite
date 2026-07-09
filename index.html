@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>SnoSite | Web Design for Local Businesses in Los Angeles</title>
+  <meta name="description" content="SnoSite builds clean, modern, mobile-friendly websites for local businesses across Los Angeles County. Get found on Google, look professional, and grow your business online." />
+  <meta name="keywords" content="web design Los Angeles, small business websites, mobile-friendly websites, local business web designer, Encino web design, Pasadena web design" />
+  <meta name="author" content="SnoSite" />
+
+  <!-- Geo meta tags (page-level) -->
+  <meta name="geo.region" content="US-CA" />
+  <meta name="geo.placename" content="Los Angeles County, CA" />
+  <meta name="geo.position" content="34.0522;-118.2437" />
+  <meta name="ICBM" content="34.0522, -118.2437" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SnoSite | Web Design for Local Businesses" />
+  <meta property="og:description" content="Clean, modern, mobile-friendly websites for local businesses in LA County." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://snosite.com" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- =====================================================
+       LocalBusiness Schema Markup
+       FILL IN: Replace all PLACEHOLDER values below
+  ====================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SnoSite",
+    "image": "https://snosite.com/og-image.jpg",
+    "url": "https://snosite.com",
+    "telephone": "+1-818-000-0000",
+    "email": "YOUR_EMAIL@example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "YOUR STREET ADDRESS",
+      "addressLocality": "YOUR CITY",
+      "addressRegion": "CA",
+      "postalCode": "YOUR ZIP",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 34.0522,
+      "longitude": -118.2437
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "14:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "12"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Maria G." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "SnoSite built us a gorgeous website and we started getting calls within the first week. Highly recommend!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "James T." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Professional, fast, and easy to work with. Our new site looks amazing on phones."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Linda R." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Finally a website that shows up on Google and actually looks good. Worth every penny."
+      }
+    ],
+    "areaServed": [
+      "Encino, CA",
+      "Tarzana, CA",
+      "Thousand Oaks, CA",
+      "Beverly Hills, CA",
+      "Pasadena, CA",
+      "Sherman Oaks, CA",
+      "Woodland Hills, CA",
+      "Calabasas, CA",
+      "Glendale, CA",
+      "Burbank, CA"
+    ],
+    "priceRange": "$$",
+    "description": "SnoSite builds clean, modern, mobile-friendly websites for local businesses across Los Angeles County."
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAV ========== -->
+  <header class="nav-wrapper" id="top">
+    <nav class="nav container">
+      <a href="#top" class="nav-logo">Sno<span>Site</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#what-i-do">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#my-work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact" class="btn btn-nav">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">Web Design · Nation Wide Service</p>
+        <h1>
+          The website that<br />
+          <span class="accent">builds websites.</span>
+        </h1>
+        <p class="hero-sub">
+          We build mobile-friendly, Google-ready, professional websites to scale your business.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+          <a href="#my-work" class="btn btn-ghost">View Samples</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHAT I DO ========== -->
+    <section class="section benefits" id="what-i-do">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">Every SnoSite website is built with dedication and precision — designed to generate your business success.</p>
+        <div class="benefits-grid">
+
+          <div class="benefit-card">
+            <!-- Geo: Encino, CA | 34.1514, -118.5012 -->
+            <div class="benefit-icon" data-geo-city="Encino" data-geo-region="CA" data-geo-lat="34.1514" data-geo-lng="-118.5012" aria-label="Mobile-friendly icon">
+              <svg class="spin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="5" y="2" width="14" height="20" rx="2.5"/>
+                <rect x="7.5" y="5" width="9" height="12" rx="1" stroke-width="1"/>
+                <line x1="9.5" y1="3.5" x2="14.5" y2="3.5"/>
+                <rect x="8.5" y="6.5" width="2.5" height="2" rx="0.3" stroke-width="1"/>
+                <rect x="13" y="6.5" width="2.5" height="2" rx="0.3" stroke-width="1"/>
+                <rect x="8.5" y="10" width="2.5" height="2" rx="0.3" stroke-width="1"/>
+                <rect x="13" y="10" width="2.5" height="2" rx="0.3" stroke-width="1"/>
+                <line x1="10" y1="19.5" x2="14" y2="19.5" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3>Mobile-Friendly Design</h3>
+            <p>A mobile-friendly design allows your website to flow perfectly on any device. All the right features are compressed, resized and hidden to achieve vertical rhythm while maintaining full functionality.</p>
+          </div>
+
+          <div class="benefit-card">
+            <!-- Geo: Pasadena, CA | 34.1478, -118.1445 -->
+            <div class="benefit-icon" data-geo-city="Pasadena" data-geo-region="CA" data-geo-lat="34.1478" data-geo-lng="-118.1445" aria-label="Search and SEO icon">
+              <svg class="spin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="10.5" cy="10.5" r="7.5"/>
+                <circle cx="10.5" cy="10.5" r="4" stroke-width="1"/>
+                <line x1="10.5" y1="6.5" x2="10.5" y2="8.5" stroke-width="1"/>
+                <line x1="10.5" y1="12.5" x2="10.5" y2="14.5" stroke-width="1"/>
+                <line x1="6.5" y1="10.5" x2="8.5" y2="10.5" stroke-width="1"/>
+                <line x1="12.5" y1="10.5" x2="14.5" y2="10.5" stroke-width="1"/>
+                <line x1="16.3" y1="16.3" x2="22" y2="22" stroke-width="2.5"/>
+              </svg>
+            </div>
+            <h3>Shows Up on Google</h3>
+            <p>Your website has built-in SEO practices, local schema markup, customizable geo tags, and fast load times so your business ranks for nearby searches.</p>
+          </div>
+
+          <div class="benefit-card">
+            <!-- Geo: Tarzana, CA | 34.1681, -118.5487 -->
+            <div class="benefit-icon" data-geo-city="Tarzana" data-geo-region="CA" data-geo-lat="34.1681" data-geo-lng="-118.5487" aria-label="Contact form icon">
+              <svg class="spin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <polyline points="2,4 12,13 22,4"/>
+                <line x1="2" y1="20" x2="8.5" y2="13.5" stroke-width="1"/>
+                <line x1="22" y1="20" x2="15.5" y2="13.5" stroke-width="1"/>
+                <rect x="15.5" y="6" width="4" height="3" rx="0.5" stroke-width="1"/>
+                <line x1="16.5" y1="7" x2="18.5" y2="7" stroke-width="0.75"/>
+                <line x1="16.5" y1="8" x2="18.5" y2="8" stroke-width="0.75"/>
+              </svg>
+            </div>
+            <h3>Contact &amp; Quote Forms</h3>
+            <p>One tap connects a customer straight to you. A clean quote form that collects endless leads, providing the customer with quick and easy access to text, call, or send an email.</p>
+          </div>
+
+          <div class="benefit-card">
+            <!-- Geo: Glendale, CA | 34.1425, -118.2551 -->
+            <div class="benefit-icon benefit-icon--duo" data-geo-city="Glendale" data-geo-region="CA" data-geo-lat="34.1425" data-geo-lng="-118.2551" aria-label="Mechanics and design icon">
+              <svg class="spin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                <line x1="5" y1="17" x2="6.5" y2="18.5" stroke-width="1"/>
+                <circle cx="4.5" cy="19.5" r="1" stroke-width="1"/>
+              </svg>
+              <svg class="spin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12,2 20.5,7 20.5,17 12,22 3.5,17 3.5,7"/>
+                <circle cx="12" cy="12" r="3.5"/>
+                <line x1="3.5" y1="7" x2="8.5" y2="10" stroke-width="0.75"/>
+                <line x1="20.5" y1="7" x2="15.5" y2="10" stroke-width="0.75"/>
+                <line x1="3.5" y1="17" x2="8.5" y2="14" stroke-width="0.75"/>
+                <line x1="20.5" y1="17" x2="15.5" y2="14" stroke-width="0.75"/>
+                <line x1="8.5" y1="10" x2="8.5" y2="14" stroke-width="0.75"/>
+                <line x1="15.5" y1="10" x2="15.5" y2="14" stroke-width="0.75"/>
+              </svg>
+            </div>
+            <h3>Mechanics &amp; Design</h3>
+            <p>Clean HTML structure, precise CSS styling, and smooth JavaScript interactions build a site that is effortless to navigate and beautiful to look at — precisely aligning with your brand.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========== PRICING ========== -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <h2 class="section-title">Premium Services</h2>
+        <p class="section-sub">Keep your website healthy, current, and working hard — every single month.</p>
+        <div class="pricing-grid">
+
+          <!-- Essential Care -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Essential Care</h3>
+              <div class="pricing-price">$39<span>/month</span></div>
+              <p class="pricing-tagline">Your website, kept live, updated, and worry-free.</p>
+            </div>
+            <ul class="pricing-features">
+              <li>Reliable hosting and domain management</li>
+              <li>Up to 2 content updates per month</li>
+              <li>Monthly check of forms, links, and mobile layout</li>
+              <li>Security and uptime monitoring</li>
+              <li>Email support within 4 business days</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+
+          <!-- Pro Care -->
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Pro Care</h3>
+              <div class="pricing-price">$89<span>/month</span></div>
+              <p class="pricing-tagline">Everything in Essential, plus ongoing help bringing in more customers.</p>
+            </div>
+            <ul class="pricing-features">
+              <li>Everything in Essential Care</li>
+              <li>Unlimited small content updates</li>
+              <li>Priority support within 48 hours</li>
+              <li>Fresh content added each month</li>
+              <li>Ongoing SEO and Google upkeep</li>
+              <li>Monthly visitor and contact-form report</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MY WORK ========== -->
+    <section class="section portfolio" id="my-work">
+      <div class="container">
+        <h2 class="section-title">View Samples</h2>
+        <div class="portfolio-grid">
+
+          <!-- LA WOODWORKS -->
+          <article class="portfolio-card">
+            <a
+              href="https://la-woodworks.netlify.app"
+              target="_blank"
+              rel="noopener"
+              class="card-img-link"
+              aria-label="View LA WoodWorks website"
+            >
+              <img
+                src="la-woodworks.png"
+                alt="Screenshot of LA WoodWorks website"
+                data-geo-city="Woodland Hills"
+                data-geo-region="CA"
+                data-geo-lat="34.1683"
+                data-geo-lng="-118.5987"
+                width="600" height="400"
+                loading="lazy"
+              />
+            </a>
+            <div class="card-body">
+              <h3>LA WoodWorks</h3>
+              <p>A hardwood installation company with a luxurious and clear layout for ultimate customer satisfaction.</p>
+              <a href="https://la-woodworks.netlify.app" target="_blank" rel="noopener" class="card-link">View Live Site →</a>
+            </div>
+          </article>
+
+          <!-- LA DENTAL -->
+          <article class="portfolio-card">
+            <a
+              href="https://la-dental.netlify.app"
+              target="_blank"
+              rel="noopener"
+              class="card-img-link"
+              aria-label="View LA Dental website"
+            >
+              <img
+                src="la-dental.png"
+                alt="Screenshot of LA Dental website"
+                data-geo-city="Sherman Oaks"
+                data-geo-region="CA"
+                data-geo-lat="34.1511"
+                data-geo-lng="-118.4495"
+                width="600" height="400"
+                loading="lazy"
+              />
+            </a>
+            <div class="card-body">
+              <h3>LA Dental</h3>
+              <p>A dental office that provides professional and affordable care, giving the patient clean attentive service.</p>
+              <a href="https://la-dental.netlify.app" target="_blank" rel="noopener" class="card-link">View Live Site →</a>
+            </div>
+          </article>
+
+          <!-- BEAN THEORY -->
+          <article class="portfolio-card">
+            <a
+              href="https://bean-theory.netlify.app"
+              target="_blank"
+              rel="noopener"
+              class="card-img-link"
+              aria-label="View Bean Theory website"
+            >
+              <img
+                src="bean-theory.png"
+                alt="Screenshot of Bean Theory website"
+                data-geo-city="Beverly Hills"
+                data-geo-region="CA"
+                data-geo-lat="34.0736"
+                data-geo-lng="-118.4004"
+                width="600" height="400"
+                loading="lazy"
+              />
+            </a>
+            <div class="card-body">
+              <h3>Bean Theory</h3>
+              <p>A cozy cafe at the heart of Beverly Hills serving delicious and comforting beverages and pastries.</p>
+              <a href="https://bean-theory.netlify.app" target="_blank" rel="noopener" class="card-link">View Live Site →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about">
+      <div class="container about-inner">
+        <div class="about-img-wrap">
+          <svg class="about-illustration" viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a website on a monitor with a cursor clicking a button"
+            data-geo-city="Glendale" data-geo-region="CA" data-geo-lat="34.1425" data-geo-lng="-118.2551">
+
+            <!-- Monitor bezel -->
+            <rect x="20" y="10" width="320" height="210" rx="14" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+            <!-- Screen -->
+            <rect x="30" y="20" width="300" height="190" rx="8" fill="#0f172a"/>
+
+            <!-- Nav bar -->
+            <rect x="30" y="20" width="300" height="28" rx="8" fill="#1e293b"/>
+            <rect x="42" y="28" width="22" height="12" rx="3" fill="#3b82f6"/>
+            <rect x="72" y="31" width="26" height="6" rx="2" fill="#475569"/>
+            <rect x="104" y="31" width="26" height="6" rx="2" fill="#475569"/>
+            <rect x="136" y="31" width="26" height="6" rx="2" fill="#475569"/>
+            <rect x="287" y="27" width="35" height="14" rx="4" fill="#3b82f6"/>
+
+            <!-- Hero heading -->
+            <rect x="42" y="60" width="175" height="11" rx="3" fill="#e2e8f0"/>
+            <rect x="42" y="76" width="130" height="11" rx="3" fill="#3b82f6"/>
+            <!-- Sub text -->
+            <rect x="42" y="94" width="195" height="5" rx="2" fill="#334155"/>
+            <rect x="42" y="104" width="155" height="5" rx="2" fill="#334155"/>
+
+            <!-- CTA button being clicked -->
+            <rect x="42" y="118" width="84" height="24" rx="5" fill="#3b82f6"/>
+            <!-- Click ripple rings -->
+            <circle cx="84" cy="130" r="18" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.45"/>
+            <circle cx="84" cy="130" r="28" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.22"/>
+
+            <!-- Service cards -->
+            <rect x="42"  y="153" width="84" height="50" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+            <rect x="138" y="153" width="84" height="50" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+            <rect x="234" y="153" width="84" height="50" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+            <!-- Card icon circles -->
+            <circle cx="63"  cy="169" r="7" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="159" cy="169" r="7" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+            <circle cx="255" cy="169" r="7" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+            <!-- Card text lines -->
+            <rect x="50"  y="182" width="60" height="4" rx="1.5" fill="#334155"/>
+            <rect x="54"  y="190" width="48" height="4" rx="1.5" fill="#1e3a5f"/>
+            <rect x="146" y="182" width="60" height="4" rx="1.5" fill="#334155"/>
+            <rect x="150" y="190" width="48" height="4" rx="1.5" fill="#1e3a5f"/>
+            <rect x="242" y="182" width="60" height="4" rx="1.5" fill="#334155"/>
+            <rect x="246" y="190" width="48" height="4" rx="1.5" fill="#1e3a5f"/>
+
+            <!-- Stand -->
+            <rect x="163" y="220" width="34" height="26" rx="2" fill="#1e293b"/>
+            <!-- Base -->
+            <rect x="118" y="244" width="124" height="14" rx="7" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+
+            <!-- Mouse cursor -->
+            <g transform="translate(95, 117)">
+              <polygon points="0,0 0,20 5,16 8,25 12,23 9,14 16,14" fill="#ffffff" stroke="#0f172a" stroke-width="0.8" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="about-text">
+          <h2 class="section-title left">About SnoSite</h2>
+          <p>
+            A website is a customer's first impression of a business, and we are here to make it the best impression. Ambitious business owners like you want visibility, credibility and consistent leads, so a website is the perfect way to attain that. A business with a smooth, modern and informative website instills trust and loyalty between the customers and the business — that is what separates outdated and unprofitable websites from a lucrative professional ones.
+          </p>
+          <p>
+            Why SnoSite? With easy-to-use contact forms and booking systems, clear buttons and mechanics, as well as beautifully thought out designs — We are here to create you a website that is competent and effortless to generate you instant leads even when you're not there. To ensure you confidence in your site, we provide our Premium Services that keep your website updated and running properly so you could focus on scaling the business and let us handle all the tech stuff.
+          </p>
+          <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;">Work With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== REVIEWS ========== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <h2 class="section-title">What clients say</h2>
+        <div class="reviews-grid">
+
+          <blockquote class="review-card">
+            <!-- Geo: Burbank, CA -->
+            <img
+              src="https://placehold.co/48x48/3b82f6/ffffff?text=MG"
+              alt="Maria G. avatar"
+              data-geo-city="Burbank"
+              data-geo-region="CA"
+              data-geo-lat="34.1808"
+              data-geo-lng="-118.3090"
+              width="48" height="48"
+              class="review-avatar"
+              loading="lazy"
+            />
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"SnoSite built us a gorgeous website and we started getting calls within the first week. Highly recommend!"</p>
+            <cite>— Maria G., <span>Encino</span></cite>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <!-- Geo: Thousand Oaks, CA -->
+            <img
+              src="https://placehold.co/48x48/3b82f6/ffffff?text=JT"
+              alt="James T. avatar"
+              data-geo-city="Thousand Oaks"
+              data-geo-region="CA"
+              data-geo-lat="34.1706"
+              data-geo-lng="-118.8376"
+              width="48" height="48"
+              class="review-avatar"
+              loading="lazy"
+            />
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Professional, fast, and easy to work with. Our new site looks amazing on phones."</p>
+            <cite>— James T., <span>Thousand Oaks</span></cite>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <!-- Geo: Pasadena, CA -->
+            <img
+              src="https://placehold.co/48x48/3b82f6/ffffff?text=LR"
+              alt="Linda R. avatar"
+              data-geo-city="Pasadena"
+              data-geo-region="CA"
+              data-geo-lat="34.1478"
+              data-geo-lng="-118.1445"
+              width="48" height="48"
+              class="review-avatar"
+              loading="lazy"
+            />
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Finally a website that shows up on Google and actually looks good. Worth every penny."</p>
+            <cite>— Linda R., <span>Pasadena</span></cite>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner">
+
+        <div class="contact-info">
+          <h2 class="section-title left">Let's work together</h2>
+          <p>Have questions or ready to get started? Contact us!</p>
+          <ul class="contact-details">
+            <li>
+              <a href="tel:+18186972215" class="contact-link">
+                <span class="contact-icon">📞</span>
+                <span>(818) 697-2215</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:snositewebdesign@gmail.com" class="contact-link">
+                <span class="contact-icon">✉️</span>
+                <span>snositewebdesign@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <span class="contact-link">
+                <span class="contact-icon">📍</span>
+                <span>Based in Los Angeles, serving nation wide</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form" name="contact" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(818) 555-1234" />
+          </div>
+          <div class="form-group">
+            <label for="message">Tell me about your business</label>
+            <textarea id="message" name="message" rows="5" placeholder="What kind of business do you have? What do you need?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#top" class="nav-logo">Sno<span>Site</span></a>
+      <p>© <span id="year"></span> SnoSite · Web Design for Local Businesses · Los Angeles County, CA</p>
+      <p>
+        <!-- REPLACE: your email -->
+        <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
