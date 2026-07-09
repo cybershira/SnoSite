@@ -227,7 +227,7 @@ h3 { font-size: clamp(1rem, 2vw, 1.1rem); font-weight: 600; color: var(--navy); 
 ===================================================== */
 .hero {
   background: linear-gradient(135deg, var(--navy) 0%, #0c1a3a 100%);
-  padding-block: clamp(3.5rem, 10vw, 6rem) clamp(3rem, 8vw, 5rem);
+  padding-block: clamp(5rem, 14vw, 9rem) clamp(4.5rem, 11vw, 7.5rem);
   position: relative;
   overflow: hidden;
 }
@@ -623,7 +623,7 @@ textarea { resize: vertical; min-height: 120px; }
 ===================================================== */
 .footer {
   background: var(--navy);
-  padding-block: 2.5rem;
+  padding-block: 5rem;
   border-top: 1px solid rgba(255,255,255,.06);
 }
 
