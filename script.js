@@ -43,7 +43,7 @@ document.querySelector('.contact-form').addEventListener('submit', e => {
     <div class="form-success">
       <div class="checkmark">✅</div>
       <h3>Message sent!</h3>
-      <p>Thanks for reaching out. I'll get back to you within one business day.</p>
+      <p>Thank you for reaching out. We will get back to you shortly.</p>
     </div>
   `;
 });
