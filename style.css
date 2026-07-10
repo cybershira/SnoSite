@@ -637,6 +637,7 @@ textarea { resize: vertical; min-height: 120px; }
 
 .footer p { color: var(--gray); font-size: .85rem; }
 .footer a { color: var(--blue); }
+.footer .nav-logo { color: var(--white); }
 .footer a:hover { text-decoration: underline; }
 
 /* =====================================================
