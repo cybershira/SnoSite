@@ -536,7 +536,10 @@
           </ul>
         </div>
 
-        <form class="contact-form" name="contact" action="#" method="POST">
+        <div id="form-success" style="display:none;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:1.5rem;text-align:center;margin-bottom:1rem;">
+          <p style="color:#166534;font-weight:600;font-size:1.1rem;">Message sent! I'll be in touch soon.</p>
+        </div>
+        <form class="contact-form" name="contact" action="https://snosite-contact.shiranoamor.workers.dev" method="POST" id="contact-form">
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Jane Smith" required />
@@ -555,6 +558,12 @@
           </div>
           <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
         </form>
+        <script>
+          if (new URLSearchParams(window.location.search).get("sent") === "1") {
+            document.getElementById("form-success").style.display = "block";
+            document.getElementById("contact-form").style.display = "none";
+          }
+        </script>
 
       </div>
     </section>
