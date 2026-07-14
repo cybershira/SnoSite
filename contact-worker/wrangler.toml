@@ -1,0 +1,11 @@
+name = "snosite-contact"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+routes = [
+  { pattern = "snosite.com/api/contact", zone_name = "snosite.com" }
+]
+
+[[send_email]]
+name = "EMAIL"
+destination_address = "snositewebdesign@gmail.com"
