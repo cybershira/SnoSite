@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SnoSite — Custom Websites for Los Angeles Businesses</title>
+<meta name="description" content="SnoSite builds custom, mobile-friendly, Google-ready websites for local businesses across Los Angeles County. No templates. No two alike. Get a free quote." />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://snosite.com/" />
+<meta property="og:title" content="SnoSite — Custom Websites for Los Angeles Businesses" />
+<meta property="og:description" content="Custom, mobile-friendly, Google-ready websites for local businesses across LA County. No templates. No two alike." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ REUSABLE LOGO MARK (snow crystal as node graph) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="crystal-mark">
+      <!-- one arm, rotated six times below -->
+      <g id="crystal-arm">
+        <line x1="32" y1="32" x2="32" y2="7" />
+        <line x1="32" y1="21" x2="24.5" y2="13.5" />
+        <line x1="32" y1="21" x2="39.5" y2="13.5" />
+        <line x1="32" y1="27" x2="27" y2="22" />
+        <line x1="32" y1="27" x2="37" y2="22" />
+        <circle cx="32" cy="7"    r="2.4" class="node-tip" />
+        <circle cx="32" cy="21"   r="1.7" />
+        <circle cx="24.5" cy="13.5" r="1.5" />
+        <circle cx="39.5" cy="13.5" r="1.5" />
+      </g>
+      <use href="#crystal-arm" transform="rotate(60 32 32)" />
+      <use href="#crystal-arm" transform="rotate(120 32 32)" />
+      <use href="#crystal-arm" transform="rotate(180 32 32)" />
+      <use href="#crystal-arm" transform="rotate(240 32 32)" />
+      <use href="#crystal-arm" transform="rotate(300 32 32)" />
+      <circle cx="32" cy="32" r="3.2" class="node-core" />
+    </g>
+  </defs>
+</svg>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#hero" aria-label="SnoSite home">
+    <span class="brand-word">
+      <span class="w-sno">Sn<span class="w-o"><span class="w-o-letter">o</span><svg class="w-snowflake" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="1" x2="10" y2="19"/><line x1="1" y1="10" x2="19" y2="10"/><line x1="3.3" y1="3.3" x2="16.7" y2="16.7"/><line x1="16.7" y1="3.3" x2="3.3" y2="16.7"/><line x1="10" y1="5" x2="7.5" y2="3.5"/><line x1="10" y1="5" x2="12.5" y2="3.5"/><line x1="10" y1="15" x2="7.5" y2="16.5"/><line x1="10" y1="15" x2="12.5" y2="16.5"/><line x1="5" y1="10" x2="3.5" y2="7.5"/><line x1="5" y1="10" x2="3.5" y2="12.5"/><line x1="15" y1="10" x2="16.5" y2="7.5"/><line x1="15" y1="10" x2="16.5" y2="12.5"/></svg></span></span><span class="w-site">S<span class="w-i">ı<svg class="w-dot-cursor" viewBox="0 0 13 18" aria-hidden="true"><path d="M1.2 1.1 L1.2 14.9 L4.9 11.3 L7.4 17 L10 15.8 L7.4 10.3 L12 10 Z"/></svg></span>te</span>
+    </span>
+  </a>
+
+  <nav class="nav-links" id="navLinks" aria-label="Main">
+    <a href="#what-i-do">Services</a>
+    <a href="#pricing">Premium</a>
+    <a href="#my-work">Work</a>
+    <a href="#about">About</a>
+    <a href="#process">Process</a>
+    <a class="btn btn-sm" href="#contact">Get a quote</a>
+  </nav>
+
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-grid">
+
+    <div class="hero-copy">
+      <p class="eyebrow reveal">Web design · Los Angeles County</p>
+      <h1 class="reveal">The website that<br /><em>builds websites.</em></h1>
+      <p class="lede reveal">
+        We build mobile-friendly, Google-ready, professional websites to scale
+        your business.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a class="btn" href="#contact">Get a free quote</a>
+        <a class="btn btn-ghost" href="#my-work">See our work</a>
+      </div>
+
+    </div>
+
+    <figure class="hero-crystal reveal">
+      <canvas id="crystal" aria-hidden="true"></canvas>
+      <p class="crystal-label">No Two Alike</p>
+      <p class="crystal-desc">Just like a snowflake -though there might be many- there is only one unique like you. A website that is built for the exact uniqueness of your business, there are just no two alike.</p>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="what-i-do">
+  <header class="section-head reveal">
+    <p class="eyebrow eyebrow-lg">Our services</p>
+    <p class="section-sub">Every SnoSite website is built with dedication and precision — designed to generate your business success.</p>
+  </header>
+
+  <div class="lattice">
+    <article class="card reveal">
+      <div class="card-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="5" y="2" width="14" height="20" rx="2.5"/><rect x="7.5" y="5" width="9" height="12" rx="1" stroke-width="1"/><line x1="9.5" y1="3.5" x2="14.5" y2="3.5"/><rect x="8.5" y="6.5" width="2.5" height="2" rx="0.3" stroke-width="1"/><rect x="13" y="6.5" width="2.5" height="2" rx="0.3" stroke-width="1"/><rect x="8.5" y="10" width="2.5" height="2" rx="0.3" stroke-width="1"/><rect x="13" y="10" width="2.5" height="2" rx="0.3" stroke-width="1"/><line x1="10" y1="19.5" x2="14" y2="19.5" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <h3>Mobile-Friendly Design</h3>
+      <p>A mobile-friendly design allows your website to flow perfectly on any device. All the right features are compressed, resized and hidden to achieve vertical rhythm while maintaining full functionality.</p>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="10.5" cy="10.5" r="7.5"/><polygon points="8.5,7 8.5,13 10,11.5 10.8,14 12,13.5 11.2,11 13,11" stroke-width="1" stroke-linejoin="round"/><line x1="16.3" y1="16.3" x2="22" y2="22" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <h3>Shows Up on Google</h3>
+      <p>Your website has built-in SEO practices, local schema markup, customizable geo tags, and fast load times so your business ranks for nearby searches.</p>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/><line x1="2" y1="20" x2="8.5" y2="13.5" stroke-width="1"/><line x1="22" y1="20" x2="15.5" y2="13.5" stroke-width="1"/>
+        </svg>
+      </div>
+      <h3>Contact &amp; Quote Forms</h3>
+      <p>One tap connects a customer straight to you. A clean quote form that collects endless leads, providing the customer with quick and easy access to text, call, or send an email.</p>
+    </article>
+
+    <article class="card reveal">
+      <div class="card-mark card-mark--duo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/><line x1="5" y1="17" x2="6.5" y2="18.5" stroke-width="1"/><circle cx="4.5" cy="19.5" r="1" stroke-width="1" fill="none"/>
+        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="12,2 20.5,7 20.5,17 12,22 3.5,17 3.5,7"/><circle cx="12" cy="12" r="3.5"/><line x1="3.5" y1="7" x2="8.5" y2="10" stroke-width="0.75"/><line x1="20.5" y1="7" x2="15.5" y2="10" stroke-width="0.75"/><line x1="3.5" y1="17" x2="8.5" y2="14" stroke-width="0.75"/><line x1="20.5" y1="17" x2="15.5" y2="14" stroke-width="0.75"/><line x1="8.5" y1="10" x2="8.5" y2="14" stroke-width="0.75"/><line x1="15.5" y1="10" x2="15.5" y2="14" stroke-width="0.75"/>
+        </svg>
+      </div>
+      <h3>Mechanics &amp; Design</h3>
+      <p>Clean HTML structure, precise CSS styling, and smooth JavaScript interactions build a site that is effortless to navigate and beautiful to look at — precisely aligning with your brand.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PREMIUM ============ -->
+<section class="section band" id="pricing">
+  <header class="section-head reveal">
+    <p class="eyebrow eyebrow-lg">Premium services</p>
+    <p class="section-sub">Keep your website healthy, current, and working hard — every single month.</p>
+  </header>
+
+  <div class="plans">
+    <article class="plan reveal">
+      <h3>Essential Care</h3>
+      <p class="plan-price">$39<em>/month</em></p>
+      <p class="plan-line">Your website, kept live, updated, and worry-free.</p>
+      <ul>
+        <li>Reliable hosting &amp; domain management</li>
+        <li>Up to 2 content updates per month</li>
+        <li>Monthly check of forms, links &amp; mobile layout</li>
+        <li>Security and uptime monitoring</li>
+        <li>Email support within 4 business days</li>
+      </ul>
+      <a class="btn btn-ghost btn-block" href="#contact">Start with Essential</a>
+    </article>
+
+    <article class="plan plan-pro reveal">
+      <p class="plan-badge">Most popular</p>
+      <h3>Pro Care</h3>
+      <p class="plan-price">$89<em>/month</em></p>
+      <p class="plan-line">Everything in Essential, plus ongoing help bringing in more customers.</p>
+      <ul>
+        <li>Everything in Essential Care</li>
+        <li>Unlimited small content updates</li>
+        <li>Priority support within 48 hours</li>
+        <li>Fresh content added each month</li>
+        <li>Ongoing SEO and Google upkeep</li>
+        <li>Monthly visitor &amp; contact-form report</li>
+      </ul>
+      <a class="btn btn-block" href="#contact">Start with Pro</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="section" id="my-work">
+  <header class="section-head reveal">
+    <p class="eyebrow eyebrow-lg">View samples</p>
+  </header>
+
+  <div class="work">
+    <article class="work-card reveal">
+      <a href="https://la-woodworks.snosite.com" target="_blank" rel="noopener" class="work-img-link">
+        <img src="la-woodworks.png" alt="Screenshot of LA WoodWorks website" class="work-img" />
+      </a>
+      <div class="work-top">
+        <span class="work-tag">Trade · Flooring</span>
+        <h3>LA WoodWorks</h3>
+        <p>A hardwood installation company with a luxurious and clear layout for ultimate customer satisfaction.</p>
+      </div>
+      <a class="work-link" href="https://la-woodworks.snosite.com" target="_blank" rel="noopener">View live site <span>&rarr;</span></a>
+    </article>
+
+    <article class="work-card reveal">
+      <a href="https://la-dental.snosite.com" target="_blank" rel="noopener" class="work-img-link">
+        <img src="la-dental.png" alt="Screenshot of LA Dental website" class="work-img" />
+      </a>
+      <div class="work-top">
+        <span class="work-tag">Healthcare · Dental</span>
+        <h3>LA Dental</h3>
+        <p>A dental office that provides professional and affordable care, giving the patient clean attentive service.</p>
+      </div>
+      <a class="work-link" href="https://la-dental.snosite.com" target="_blank" rel="noopener">View live site <span>&rarr;</span></a>
+    </article>
+
+    <article class="work-card reveal">
+      <a href="https://bean-theory.snosite.com" target="_blank" rel="noopener" class="work-img-link">
+        <img src="bean-theory.png" alt="Screenshot of Bean Theory website" class="work-img" />
+      </a>
+      <div class="work-top">
+        <span class="work-tag">Hospitality · Café</span>
+        <h3>Bean Theory</h3>
+        <p>A cozy cafe at the heart of Beverly Hills serving delicious and comforting beverages and pastries.</p>
+      </div>
+      <a class="work-link" href="https://bean-theory.snosite.com" target="_blank" rel="noopener">View live site <span>&rarr;</span></a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section band" id="about">
+  <div class="about-grid">
+    <div class="reveal">
+      <p class="eyebrow eyebrow-lg">About SnoSite</p>
+      <h2>Your first <em>impression</em>,<br>is our <em>priority</em></h2>
+      <p class="about-p">
+        A website is a customer's first impression of a business — and we're here
+        to make it the best impression.
+      </p>
+      <blockquote class="pull">
+        To succeed, a business needs visibility, credibility, and consistent leads.
+      </blockquote>
+      <p class="about-p">
+        A smooth, modern, informative site builds trust and loyalty. That's what
+        separates outdated, unprofitable websites from lucrative professional ones.
+      </p>
+      <p class="about-p">
+        Why SnoSite? With easy-to-use contact forms and booking systems, clear buttons and mechanics, as well as beautifully thought out designs — We are here to create you a website that is competent yet effortless. To ensure you confidence in your site, we provide our Premium Services that keep your website updated and running properly so you could focus on scaling the business and let us handle all the tech stuff.
+      </p>
+
+      <svg id="aboutMonitor" class="about-illustration" viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Click to celebrate — illustration of a website on a monitor" style="cursor:pointer;margin-top:32px;">
+        <rect x="20" y="10" width="320" height="210" rx="14" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+        <rect x="30" y="20" width="300" height="190" rx="8" fill="#0f172a"/>
+        <rect x="30" y="20" width="300" height="28" rx="8" fill="#1e293b"/>
+        <rect x="42" y="28" width="22" height="12" rx="3" fill="#3b82f6"/>
+        <rect x="72" y="31" width="26" height="6" rx="2" fill="#475569"/>
+        <rect x="104" y="31" width="26" height="6" rx="2" fill="#475569"/>
+        <rect x="136" y="31" width="26" height="6" rx="2" fill="#475569"/>
+        <rect x="287" y="27" width="35" height="14" rx="4" fill="#3b82f6"/>
+        <rect x="42" y="60" width="175" height="11" rx="3" fill="#e2e8f0"/>
+        <rect x="42" y="76" width="130" height="11" rx="3" fill="#3b82f6"/>
+        <rect x="42" y="94" width="195" height="5" rx="2" fill="#334155"/>
+        <rect x="42" y="104" width="155" height="5" rx="2" fill="#334155"/>
+        <rect x="42" y="118" width="84" height="24" rx="5" fill="#3b82f6"/>
+        <circle cx="84" cy="130" r="18" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.45"/>
+        <circle cx="84" cy="130" r="28" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.22"/>
+        <rect x="42"  y="153" width="84" height="50" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <rect x="138" y="153" width="84" height="50" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <rect x="234" y="153" width="84" height="50" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <circle cx="63"  cy="169" r="7" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+        <circle cx="159" cy="169" r="7" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+        <circle cx="255" cy="169" r="7" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.7"/>
+        <rect x="50"  y="182" width="60" height="4" rx="1.5" fill="#334155"/>
+        <rect x="54"  y="190" width="48" height="4" rx="1.5" fill="#1e3a5f"/>
+        <rect x="146" y="182" width="60" height="4" rx="1.5" fill="#334155"/>
+        <rect x="150" y="190" width="48" height="4" rx="1.5" fill="#1e3a5f"/>
+        <rect x="242" y="182" width="60" height="4" rx="1.5" fill="#334155"/>
+        <rect x="246" y="190" width="48" height="4" rx="1.5" fill="#1e3a5f"/>
+        <rect x="163" y="220" width="34" height="26" rx="2" fill="#1e293b"/>
+        <rect x="118" y="244" width="124" height="14" rx="7" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <g transform="translate(95, 117)">
+          <polygon points="0,0 0,20 5,16 8,25 12,23 9,14 16,14" fill="#ffffff" stroke="#0f172a" stroke-width="0.8" stroke-linejoin="round"/>
+        </g>
+      </svg>
+    </div>
+
+    <aside class="thesis reveal" id="thesisBox" style="cursor:pointer">
+      <div class="thesis-flake-wrap">
+        <svg class="thesis-flake" viewBox="0 0 40 40" aria-hidden="true">
+          <line x1="20" y1="2" x2="20" y2="38"/><line x1="2" y1="20" x2="38" y2="20"/>
+          <line x1="6.6" y1="6.6" x2="33.4" y2="33.4"/><line x1="33.4" y1="6.6" x2="6.6" y2="33.4"/>
+          <line x1="20" y1="10" x2="15" y2="7"/><line x1="20" y1="10" x2="25" y2="7"/>
+          <line x1="20" y1="30" x2="15" y2="33"/><line x1="20" y1="30" x2="25" y2="33"/>
+          <line x1="10" y1="20" x2="7" y2="15"/><line x1="10" y1="20" x2="7" y2="25"/>
+          <line x1="30" y1="20" x2="33" y2="15"/><line x1="30" y1="20" x2="33" y2="25"/>
+        </svg>
+      </div>
+      <h3>No two alike</h3>
+      <p>
+        A snowflake grows from its own conditions — temperature, moisture, time —
+        and never repeats. A template does the opposite: one shape, stamped out,
+        over and over.
+      </p>
+      <p>
+        Your business isn't a stamp of another business, so your site shouldn't be either — here we make sure that every website that we build perfectly encapsulates your unique brand — we make sure there are no two alike.
+      </p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <header class="section-head reveal">
+    <p class="eyebrow">How we work</p>
+    <h2>From first call to <em>live site</em></h2>
+    <p class="section-sub">Four steps, in order. You always know what happens next.</p>
+  </header>
+
+  <ol class="steps">
+    <li class="step reveal">
+      <span class="step-n">01</span>
+      <h3>We talk</h3>
+      <p>A short conversation about your business, your customers, and what the site actually needs to do. No jargon.</p>
+    </li>
+    <li class="step reveal">
+      <span class="step-n">02</span>
+      <h3>You see it first</h3>
+      <p>We build a sample homepage for your business before you pay anything. If you don't like it, you owe nothing.</p>
+    </li>
+    <li class="step reveal">
+      <span class="step-n">03</span>
+      <h3>We build it out</h3>
+      <p>The full site, with your photos and words. You review, we revise, and nothing goes live until you're happy.</p>
+    </li>
+    <li class="step reveal">
+      <span class="step-n">04</span>
+      <h3>It goes live</h3>
+      <p>Your domain, your site, your name on it. Add a care plan and we keep it healthy from there.</p>
+    </li>
+  </ol>
+
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section band" id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <p class="eyebrow">Get a quote</p>
+      <h2>Let's work <em>together</em></h2>
+      <p class="section-sub">
+        Tell us about your business. We'll reply with what we'd build, what it
+        costs, and how long it takes — no obligation, and 15% off this summer.
+      </p>
+
+      <ul class="direct">
+        <li>
+          <span class="direct-k">Phone</span>
+          <a href="tel:+18186972215">(818) 697-2215</a>
+        </li>
+        <li>
+          <span class="direct-k">Email</span>
+          <a href="mailto:snositewebdesign@gmail.com">snositewebdesign@gmail.com</a>
+        </li>
+        <li>
+          <span class="direct-k">Area</span>
+          <span>Los Angeles County</span>
+        </li>
+      </ul>
+    </div>
+
+    <form class="form reveal" id="quoteForm" action="https://formspree.io/f/mqerpqla" method="POST">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+      </div>
+      <div class="field">
+        <label for="phone">Phone <span class="opt">optional</span></label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" />
+      </div>
+      <div class="field">
+        <label for="business">Business</label>
+        <input id="business" name="business" type="text" required />
+      </div>
+      <div class="field">
+        <label for="details">What do you need?</label>
+        <textarea id="details" name="details" rows="4" required></textarea>
+      </div>
+      <button class="btn btn-block" type="submit">Send it over</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="#hero" aria-label="SnoSite home">
+        <span class="brand-word">
+          <span class="w-sno">Sn<span class="w-o"><span class="w-o-letter">o</span><svg class="w-snowflake" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="1" x2="10" y2="19"/><line x1="1" y1="10" x2="19" y2="10"/><line x1="3.3" y1="3.3" x2="16.7" y2="16.7"/><line x1="16.7" y1="3.3" x2="3.3" y2="16.7"/><line x1="10" y1="5" x2="7.5" y2="3.5"/><line x1="10" y1="5" x2="12.5" y2="3.5"/><line x1="10" y1="15" x2="7.5" y2="16.5"/><line x1="10" y1="15" x2="12.5" y2="16.5"/><line x1="5" y1="10" x2="3.5" y2="7.5"/><line x1="5" y1="10" x2="3.5" y2="12.5"/><line x1="15" y1="10" x2="16.5" y2="7.5"/><line x1="15" y1="10" x2="16.5" y2="12.5"/></svg></span></span><span class="w-site">S<span class="w-i">ı<svg class="w-dot-cursor" viewBox="0 0 13 18" aria-hidden="true"><path d="M1.2 1.1 L1.2 14.9 L4.9 11.3 L7.4 17 L10 15.8 L7.4 10.3 L12 10 Z"/></svg></span>te</span>
+        </span>
+      </a>
+      <p class="foot-line">Custom websites for Los Angeles businesses. No templates, no two alike.</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#what-i-do">Services</a>
+      <a href="#pricing">Premium</a>
+      <a href="#my-work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Get a quote</a>
+    </nav>
+  </div>
+  <p class="copy">© <span id="year">2026</span> SnoSite · snosite.com · Los Angeles, CA</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
