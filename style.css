@@ -481,7 +481,7 @@ h1 em, h2 em{
 /* ---------- responsive ---------- */
 @media (max-width:1000px){
   .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
-  .hero-crystal{order:-1}
+
   #crystal{max-width:340px}
   .work,.steps{grid-template-columns:repeat(2,1fr)}
 }
