@@ -262,10 +262,10 @@ const io = new IntersectionObserver(entries => {
       io.unobserve(entry.target);
     }
   });
-}, { threshold:0.12, rootMargin:'0px 0px -40px 0px' });
+}, { threshold:0.05, rootMargin:'0px 0px 0px 0px' });
 
 document.querySelectorAll('.reveal').forEach((el, i) => {
-  el.style.transitionDelay = (i % 4) * 70 + 'ms';   // gentle stagger
+  el.style.transitionDelay = (i % 4) * 25 + 'ms';
   io.observe(el);
 });
 
@@ -354,10 +354,10 @@ const thesisBox = document.getElementById('thesisBox');
 if (thesisBox) thesisBox.addEventListener('click', () => rainSnowflakes());
 
 /* --- work card links → binary rain then open --- */
-document.querySelectorAll('.work-link, .work-img-link').forEach(link => {
-  link.addEventListener('click', e => {
+document.querySelectorAll('.work-card[href]').forEach(card => {
+  card.addEventListener('click', e => {
     e.preventDefault();
-    const href = link.href;
+    const href = card.href;
     rainBinary(() => window.open(href, '_blank'));
   });
 });
