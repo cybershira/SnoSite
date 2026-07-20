@@ -45,8 +45,8 @@ body{
 body::before{
   content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:
-    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.10) 1px, transparent 1px);
   background-size:56px 56px;
 }
 body > *{position:relative;z-index:1}
@@ -511,13 +511,22 @@ h1 em, h2 em{
 .thesis-flake line{stroke:#fff;stroke-width:1.8;stroke-linecap:round}
 
 /* ---------- crystal label ---------- */
+.crystal-box{
+  margin-top:22px;
+  background:rgba(59,130,246,.08);
+  border:1px solid rgba(125,211,252,.22);
+  border-radius:14px;
+  padding:18px 22px 20px;
+  text-align:center;
+  box-shadow:0 0 28px -8px rgba(59,130,246,.35), inset 0 1px 0 rgba(125,211,252,.1);
+}
 .crystal-label{
-  font-family:var(--display);font-weight:700;font-size:clamp(18px,2vw,24px);
-  color:var(--snow);text-align:center;margin-top:20px;letter-spacing:.04em;
+  font-family:var(--display);font-weight:700;font-size:clamp(18px,2vw,22px);
+  color:var(--snow);letter-spacing:.04em;
 }
 .crystal-desc{
-  text-align:center;font-size:14px;color:var(--slate);
-  max-width:36ch;margin:10px auto 0;line-height:1.65;
+  font-size:13.5px;color:var(--slate);
+  margin:8px auto 0;line-height:1.65;
 }
 
 /* ---------- about illustration ---------- */
