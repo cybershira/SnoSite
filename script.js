@@ -362,6 +362,18 @@ document.querySelectorAll('.work-card[href]').forEach(card => {
   });
 });
 
+/* --- service card icon tap spin --- */
+document.querySelectorAll('.card-mark').forEach(mark => {
+  mark.addEventListener('click', () => {
+    mark.querySelectorAll('svg').forEach(svg => {
+      svg.classList.remove('tapped');
+      void svg.offsetWidth;
+      svg.classList.add('tapped');
+      svg.addEventListener('animationend', () => svg.classList.remove('tapped'), { once: true });
+    });
+  });
+});
+
 /* --- contact form --- */
 const quoteForm = document.getElementById('quoteForm');
 if (quoteForm) {

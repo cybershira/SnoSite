@@ -477,6 +477,15 @@ h1 em, h2 em{
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .4s ease, transform .4s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
+/* ---------- service icon spin ---------- */
+@keyframes icon-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+/* spin as card scrolls in — touch/mobile only */
+@media(hover:none){
+  .card.in .card-mark svg{animation:icon-spin .7s cubic-bezier(.2,.8,.2,1) both}
+}
+/* spin on tap — overrides scroll-in animation */
+.card .card-mark svg.tapped{animation:icon-spin .55s cubic-bezier(.2,.8,.2,1) !important}
+
 /* ---------- responsive ---------- */
 @media (max-width:1000px){
   .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
