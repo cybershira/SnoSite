@@ -457,7 +457,7 @@ h1 em, h2 em{
 
 /* ---------- footer ---------- */
 .footer{
-  border-top:1px solid var(--line);padding:56px var(--gut) 34px;
+  border-top:1px solid var(--line);padding:80px var(--gut) 64px;
   background:rgba(15,23,42,.5);
 }
 .foot-grid{

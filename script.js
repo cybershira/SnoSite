@@ -353,14 +353,6 @@ if (monitor) monitor.addEventListener('click', () => rainBinary());
 const thesisBox = document.getElementById('thesisBox');
 if (thesisBox) thesisBox.addEventListener('click', () => rainSnowflakes());
 
-/* --- work card links → binary rain then open --- */
-document.querySelectorAll('.work-card[href]').forEach(card => {
-  card.addEventListener('click', e => {
-    e.preventDefault();
-    const href = card.href;
-    rainBinary(() => window.open(href, '_blank'));
-  });
-});
 
 /* --- service card icon tap spin --- */
 document.querySelectorAll('.card-mark').forEach(mark => {
