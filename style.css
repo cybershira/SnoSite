@@ -178,14 +178,14 @@ h1 em, h2 em{
   margin-top:6px;
   font-family:var(--display);font-size:15px;font-weight:700;
   color:#1a0a00;
-  background:#fb923c;
+  background:#c2612a;
   border:none;border-radius:100px;
   padding:13px 32px;
   cursor:pointer;text-decoration:none;
   letter-spacing:.02em;
   transition:background .2s,transform .15s;
 }
-.fall-btn:hover{ background:#f97316;transform:translateY(-2px); }
+.fall-btn:hover{ background:#b05520;transform:translateY(-2px); }
 .fall-btn:active{ transform:scale(.97); }
 .fall-dates-wrap{ margin-top:2px; }
 .fall-dates{
