@@ -107,6 +107,43 @@ h1 em, h2 em{
 
 :focus-visible{outline:2px solid var(--ice);outline-offset:3px;border-radius:4px}
 
+/* ---------- fall sale banner ---------- */
+.fall-banner{
+  background:linear-gradient(135deg,#431407 0%,#7c2d12 40%,#431407 100%);
+  border-top:1px solid rgba(251,146,60,.25);
+  border-bottom:1px solid rgba(251,146,60,.25);
+  padding:18px var(--gut);
+}
+.fall-banner-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.fall-leaf{ font-size:20px; line-height:1; }
+.fall-banner-text{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+}
+.fall-title{
+  font-family:var(--display);font-size:17px;font-weight:700;
+  color:#fed7aa;letter-spacing:.03em;
+}
+.fall-sep{ color:rgba(251,146,60,.5); font-size:14px; }
+.fall-offer{
+  font-family:var(--display);font-size:17px;font-weight:700;color:#fb923c;
+}
+.fall-dates{
+  font-family:var(--body);font-size:13px;font-weight:500;
+  color:rgba(251,146,60,.7);letter-spacing:.04em;
+  background:rgba(251,146,60,.12);
+  border:1px solid rgba(251,146,60,.3);
+  border-radius:100px;
+  padding:4px 14px;
+}
+
 /* ---------- scroll progress ---------- */
 .progress{
   position:fixed;top:0;left:0;height:2px;width:0;z-index:60;
