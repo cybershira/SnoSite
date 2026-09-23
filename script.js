@@ -340,6 +340,33 @@ function rainBinary(onDone) {
   }, 2800);
 }
 
+/* --- fall banner click → leaf rain --- */
+function rainLeaves() {
+  injectKeyframes('leaffall-style',
+    `@keyframes leaffall{0%{transform:translateY(0) rotate(0deg) scale(1);opacity:1}100%{transform:translateY(110vh) rotate(540deg) scale(.7);opacity:0}}`
+  );
+  const emojis = ['🍂','🍁','🍂','🍁','🍂','🍂','🍁'];
+  const wrap = document.createElement('div');
+  wrap.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden;';
+  document.body.appendChild(wrap);
+  for (let i = 0; i < 60; i++) {
+    const f = document.createElement('span');
+    const size = 18 + Math.random() * 22;
+    const dur = 2.2 + Math.random() * 2.4;
+    const delay = Math.random() * 1.6;
+    f.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    f.style.cssText = `position:absolute;left:${Math.random()*105-2}%;top:-40px;font-size:${size}px;animation:leaffall ${dur}s ${delay}s ease-in forwards;`;
+    wrap.appendChild(f);
+  }
+  setTimeout(() => {
+    wrap.style.transition = 'opacity .8s ease';
+    wrap.style.opacity = '0';
+    setTimeout(() => wrap.remove(), 800);
+  }, 3500);
+}
+const fallBanner = document.querySelector('.fall-banner');
+if (fallBanner) fallBanner.addEventListener('click', rainLeaves);
+
 /* --- logo click → snowflake rain --- */
 document.querySelectorAll('.brand').forEach(el => {
   el.addEventListener('click', () => rainSnowflakes());
