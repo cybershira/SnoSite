@@ -22,7 +22,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
    ============================================================ */
 
 const canvas = document.getElementById('crystal');
-const ctx = canvas.getContext('2d');
+const ctx = canvas ? canvas.getContext('2d') : null;
 const idEl = document.getElementById('crystalId');
 const regrowBtn = document.getElementById('regrow');
 
