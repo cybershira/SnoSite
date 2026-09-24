@@ -265,7 +265,7 @@ const io = new IntersectionObserver(entries => {
 }, { threshold:0.05, rootMargin:'0px 0px 0px 0px' });
 
 document.querySelectorAll('.reveal').forEach((el, i) => {
-  el.style.transitionDelay = (i % 4) * 25 + 'ms';
+  if (!el.style.transitionDelay) el.style.transitionDelay = (i % 4) * 25 + 'ms';
   io.observe(el);
 });
 
