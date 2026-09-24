@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SnoSite — Pricing & Add-Ons</title>
+<meta name="description" content="See exactly what's included in every SnoSite website and choose the add-ons that fit your business. Serving Los Angeles County." />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<style>
+/* ---- page-specific overrides ---- */
+.ao-hero{
+  padding:140px var(--gut) 72px;
+  text-align:center;
+}
+.ao-hero .eyebrow{ margin-bottom:18px; }
+.ao-hero h1{
+  font-family:var(--display);
+  font-size:clamp(36px,6vw,62px);
+  font-weight:700;
+  color:var(--frost);
+  line-height:1.1;
+  letter-spacing:-.03em;
+  margin-bottom:18px;
+}
+.ao-hero h1 span{ color:var(--ice); }
+.ao-hero p{
+  font-size:18px;
+  color:var(--slate);
+  max-width:520px;
+  margin:0 auto;
+  line-height:1.65;
+}
+
+/* ---- section blocks ---- */
+.ao-section{
+  padding:72px var(--gut);
+  max-width:var(--max);
+  margin:0 auto;
+}
+.ao-section + .ao-section{ border-top:1px solid rgba(255,255,255,.06); }
+
+.ao-section-head{
+  margin-bottom:40px;
+}
+.ao-section-num{
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--frost);
+  opacity:.3;
+  letter-spacing:.12em;
+  display:block;
+  margin-bottom:8px;
+}
+.ao-section-title{
+  font-family:var(--display);
+  font-size:clamp(22px,3.5vw,32px);
+  font-weight:700;
+  color:var(--frost);
+  letter-spacing:-.02em;
+  margin-bottom:8px;
+}
+.ao-section-sub{
+  font-size:15px;
+  color:var(--slate);
+  max-width:560px;
+  line-height:1.6;
+}
+
+/* ---- base card (section 1) ---- */
+.base-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:40px 44px;
+  display:flex;
+  align-items:flex-start;
+  gap:48px;
+  flex-wrap:wrap;
+}
+.base-price-block{ flex-shrink:0; }
+.base-price{
+  font-family:var(--display);
+  font-size:clamp(52px,8vw,80px);
+  font-weight:700;
+  color:var(--ice);
+  line-height:.9;
+  letter-spacing:-.04em;
+}
+.base-price em{
+  font-style:normal;
+  font-size:.28em;
+  color:var(--slate);
+  letter-spacing:0;
+  vertical-align:super;
+}
+.base-label{
+  font-family:var(--body);
+  font-size:13px;
+  color:var(--slate);
+  margin-top:8px;
+  letter-spacing:.03em;
+}
+.base-features{
+  flex:1;
+  min-width:240px;
+}
+.base-features ul{
+  list-style:none;
+  padding:0;margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.base-features li{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:15px;
+  color:var(--frost);
+  line-height:1.45;
+}
+.base-features li::before{
+  content:'';
+  width:16px;height:16px;
+  border-radius:50%;
+  border:1.5px solid var(--frost);
+  flex-shrink:0;
+  margin-top:2px;
+  background:rgba(59,130,246,.15);
+}
+.base-extra{
+  margin-top:20px;
+  padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.07);
+  font-size:14px;
+  color:var(--slate);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.base-extra strong{ color:var(--ice); font-family:var(--display); }
+
+/* ---- addon grid ---- */
+.ao-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:16px;
+}
+.ao-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px;
+  padding:28px 28px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition:border-color .2s,background .2s;
+}
+.ao-card:hover{
+  border-color:rgba(59,130,246,.3);
+  background:rgba(59,130,246,.04);
+}
+.ao-card-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+.ao-card-title{
+  font-family:var(--display);
+  font-size:17px;
+  font-weight:700;
+  color:var(--frost);
+  line-height:1.2;
+}
+.ao-price-tag{
+  font-family:var(--display);
+  font-size:15px;
+  font-weight:700;
+  color:var(--ink);
+  background:var(--ice);
+  border-radius:100px;
+  padding:3px 12px;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.ao-card-desc{
+  font-size:14px;
+  color:var(--slate);
+  line-height:1.6;
+  flex:1;
+}
+
+/* section color accents */
+.ao-s2 .ao-price-tag{ background:#7dd3fc; color:#060b16; }
+.ao-s3 .ao-price-tag{ background:#818cf8; color:#fff; }
+.ao-s4 .ao-price-tag{ background:#34d399; color:#060b16; }
+
+.ao-s3 .ao-card:hover{ border-color:rgba(129,140,248,.3); background:rgba(129,140,248,.04); }
+.ao-s4 .ao-card:hover{ border-color:rgba(52,211,153,.3); background:rgba(52,211,153,.04); }
+
+/* ---- CTA band ---- */
+.ao-cta{
+  background:rgba(255,255,255,.02);
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:72px var(--gut) 80px;
+  text-align:center;
+}
+.ao-cta h2{
+  font-family:var(--display);
+  font-size:clamp(28px,4vw,40px);
+  font-weight:700;
+  color:var(--frost);
+  letter-spacing:-.02em;
+  margin-bottom:14px;
+}
+.ao-cta p{
+  font-size:16px;
+  color:var(--slate);
+  max-width:460px;
+  margin:0 auto 32px;
+  line-height:1.65;
+}
+
+@media(max-width:680px){
+  .base-card{ padding:28px 24px; gap:24px; }
+  .ao-section{ padding:52px var(--gut); }
+}
+</style>
+</head>
+<body>
+
+<!-- hidden svg defs copied from main page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="crystal-mark">
+      <g id="crystal-arm">
+        <line x1="32" y1="32" x2="32" y2="7" />
+        <line x1="32" y1="21" x2="24.5" y2="13.5" />
+        <line x1="32" y1="21" x2="39.5" y2="13.5" />
+        <line x1="32" y1="27" x2="27" y2="22" />
+        <line x1="32" y1="27" x2="37" y2="22" />
+        <circle cx="32" cy="7"    r="2.4" class="node-tip" />
+        <circle cx="32" cy="21"   r="1.7" />
+        <circle cx="24.5" cy="13.5" r="1.5" />
+        <circle cx="39.5" cy="13.5" r="1.5" />
+      </g>
+      <use href="#crystal-arm" transform="rotate(60 32 32)" />
+      <use href="#crystal-arm" transform="rotate(120 32 32)" />
+      <use href="#crystal-arm" transform="rotate(180 32 32)" />
+      <use href="#crystal-arm" transform="rotate(240 32 32)" />
+      <use href="#crystal-arm" transform="rotate(300 32 32)" />
+      <circle cx="32" cy="32" r="3.2" class="node-core" />
+    </g>
+  </defs>
+</svg>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="/" aria-label="SnoSite home">
+    <span class="brand-word">
+      <span class="w-sno">Sn<span class="w-o"><span class="w-o-letter">o</span><svg class="w-snowflake" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="1" x2="10" y2="19"/><line x1="1" y1="10" x2="19" y2="10"/><line x1="3.3" y1="3.3" x2="16.7" y2="16.7"/><line x1="16.7" y1="3.3" x2="3.3" y2="16.7"/><line x1="10" y1="5" x2="7.5" y2="3.5"/><line x1="10" y1="5" x2="12.5" y2="3.5"/><line x1="10" y1="15" x2="7.5" y2="16.5"/><line x1="10" y1="15" x2="12.5" y2="16.5"/><line x1="5" y1="10" x2="3.5" y2="7.5"/><line x1="5" y1="10" x2="3.5" y2="12.5"/><line x1="15" y1="10" x2="16.5" y2="7.5"/><line x1="15" y1="10" x2="16.5" y2="12.5"/></svg></span></span><span class="w-site">S<span class="w-i">ı<svg class="w-dot-cursor" viewBox="0 0 13 18" aria-hidden="true"><path d="M1.2 1.1 L1.2 14.9 L4.9 11.3 L7.4 17 L10 15.8 L7.4 10.3 L12 10 Z"/></svg></span>te</span>
+    </span>
+  </a>
+
+  <nav class="nav-links" id="navLinks" aria-label="Main">
+    <a href="/#what-i-do">Services</a>
+    <a href="/#pricing">Premium</a>
+    <a href="/#my-work">Work</a>
+    <a href="/#about">About</a>
+    <a href="/#process">Process</a>
+    <a class="btn btn-sm" href="/#contact">Get a quote</a>
+  </nav>
+
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="ao-hero">
+  <p class="eyebrow eyebrow-lg">Pricing & Add-Ons</p>
+  <h1>Build exactly what<br>your business <span>needs.</span></h1>
+  <p>Every SnoSite starts with a solid base. Then you choose the add-ons that make sense for your business — nothing more, nothing less.</p>
+</section>
+
+<!-- ============ SECTION 1: BASE ============ -->
+<section class="ao-section">
+  <div class="ao-section-head">
+    <span class="ao-section-num">01</span>
+    <h2 class="ao-section-title">Your Base</h2>
+    <p class="ao-section-sub">Everything you need to launch a professional, beautiful website — ready to go from day one.</p>
+  </div>
+
+  <div class="base-card">
+    <div class="base-price-block">
+      <div class="base-price"><em>$</em>450</div>
+      <p class="base-label">one-time</p>
+    </div>
+    <div class="base-features">
+      <ul>
+        <li>Up to 5 pages with mobile-friendly design</li>
+        <li>A contact form that sends directly to your inbox</li>
+        <li>Standard SEO — meta tags, titles, and descriptions</li>
+        <li>Beautiful, custom styling built around your brand</li>
+        <li>Social media links integrated throughout</li>
+        <li>A simple photo gallery</li>
+      </ul>
+      <div class="base-extra">
+        <strong>+ $10</strong> per page beyond 5
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: CONTENT & SETUP ============ -->
+<section class="ao-section ao-s2">
+  <div class="ao-section-head">
+    <span class="ao-section-num">02</span>
+    <h2 class="ao-section-title">Content & Setup</h2>
+    <p class="ao-section-sub">Everything that makes your site visible, credible, and ready to be found — each $30.</p>
+  </div>
+
+  <div class="ao-grid">
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Google Business Profile Setup</p>
+        <span class="ao-price-tag">$30</span>
+      </div>
+      <p class="ao-card-desc">Creating and fully filling out the Google listing that makes your business show up on Google Maps and local searches — with the right category, hours, photos, and description.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Full SEO Package</p>
+        <span class="ao-price-tag">$30</span>
+      </div>
+      <p class="ao-card-desc">Schema markup, geo tags, and local optimization built into the code so Google understands your business and ranks it for nearby customers searching for what you offer.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Custom Domain Setup</p>
+        <span class="ao-price-tag">$30</span>
+      </div>
+      <p class="ao-card-desc">Getting your business its own professional web address and connecting it to the site so it's live and yours to own.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Photo Sourcing & Editing</p>
+        <span class="ao-price-tag">$30</span>
+      </div>
+      <p class="ao-card-desc">Finding, selecting, and touching up quality images — licensed stock or your own photos — so the site looks professional instead of empty.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3: VISUAL & MOTION ============ -->
+<section class="ao-section ao-s3">
+  <div class="ao-section-head">
+    <span class="ao-section-num">03</span>
+    <h2 class="ao-section-title">Visual & Motion</h2>
+    <p class="ao-section-sub">Effects that make your site feel alive and modern the moment someone lands on it — each $45.</p>
+  </div>
+
+  <div class="ao-grid">
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Scroll Animations & Reveals</p>
+        <span class="ao-price-tag">$45</span>
+      </div>
+      <p class="ao-card-desc">Elements that fade, slide, or appear as the visitor scrolls down the page, making the site feel modern and alive.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Custom Hover Effects</p>
+        <span class="ao-price-tag">$45</span>
+      </div>
+      <p class="ao-card-desc">Small responsive touches like buttons that shift, images that zoom, and icons that react — polished micro-interactions that elevate the feel of the whole site.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Animated Hero Section</p>
+        <span class="ao-price-tag">$45</span>
+      </div>
+      <p class="ao-card-desc">Motion in the top section of the page — a subtle moving gradient, drifting shapes, or shifting text — to grab attention immediately.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Video Background</p>
+        <span class="ao-price-tag">$45</span>
+      </div>
+      <p class="ao-card-desc">A short looping video playing behind a section or the hero, giving visual depth and interest that photos alone can't match.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4: INTERACTIVE & FUNCTIONAL ============ -->
+<section class="ao-section ao-s4">
+  <div class="ao-section-head">
+    <span class="ao-section-num">04</span>
+    <h2 class="ao-section-title">Interactive & Functional</h2>
+    <p class="ao-section-sub">Tools that turn your website into a working part of your business — each $99.</p>
+  </div>
+
+  <div class="ao-grid">
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Online Booking & Scheduling</p>
+        <span class="ao-price-tag">$99</span>
+      </div>
+      <p class="ao-card-desc">A system that lets customers pick a time slot and book an appointment right on the site, so your business fills its calendar without phone tag.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Quote Calculator</p>
+        <span class="ao-price-tag">$99</span>
+      </div>
+      <p class="ao-card-desc">An interactive tool where visitors enter their details and instantly get an estimated price — capturing serious leads before they even call.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Menu & Catalog System</p>
+        <span class="ao-price-tag">$99</span>
+      </div>
+      <p class="ao-card-desc">An organized, easy-to-browse display of your menu items or products — with descriptions and prices laid out cleanly.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Newsletter Signup & Email Integration</p>
+        <span class="ao-price-tag">$99</span>
+      </div>
+      <p class="ao-card-desc">A signup box that collects visitor emails and connects to an email service, so you can build a mailing list and send promotions.</p>
+    </div>
+    <div class="ao-card">
+      <div class="ao-card-top">
+        <p class="ao-card-title">Google Reviews Embed</p>
+        <span class="ao-price-tag">$99</span>
+      </div>
+      <p class="ao-card-desc">A section that pulls in your real Google reviews and displays them live on the site, updating automatically as new ones come in.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<div class="ao-cta">
+  <h2>Ready to build yours?</h2>
+  <p>Tell us about your business and we'll put together exactly what you need — no pressure, no obligation.</p>
+  <a class="btn" href="/#contact">Get a free quote</a>
+</div>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="foot-grid">
+
+    <div class="foot-brand">
+      <a class="brand" href="/" aria-label="SnoSite home">
+        <span class="brand-word">
+          <span class="w-sno">Sn<span class="w-o"><span class="w-o-letter">o</span><svg class="w-snowflake" viewBox="0 0 20 20" aria-hidden="true"><line x1="10" y1="1" x2="10" y2="19"/><line x1="1" y1="10" x2="19" y2="10"/><line x1="3.3" y1="3.3" x2="16.7" y2="16.7"/><line x1="16.7" y1="3.3" x2="3.3" y2="16.7"/><line x1="10" y1="5" x2="7.5" y2="3.5"/><line x1="10" y1="5" x2="12.5" y2="3.5"/><line x1="10" y1="15" x2="7.5" y2="16.5"/><line x1="10" y1="15" x2="12.5" y2="16.5"/><line x1="5" y1="10" x2="3.5" y2="7.5"/><line x1="5" y1="10" x2="3.5" y2="12.5"/><line x1="15" y1="10" x2="16.5" y2="7.5"/><line x1="15" y1="10" x2="16.5" y2="12.5"/></svg></span></span><span class="w-site">S<span class="w-i">ı<svg class="w-dot-cursor" viewBox="0 0 13 18" aria-hidden="true"><path d="M1.2 1.1 L1.2 14.9 L4.9 11.3 L7.4 17 L10 15.8 L7.4 10.3 L12 10 Z"/></svg></span>te</span>
+        </span>
+      </a>
+      <p class="foot-line">Custom websites for Los Angeles businesses.</p>
+    </div>
+
+    <div class="foot-col">
+      <p class="foot-heading">Navigate</p>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="/#what-i-do">Services</a>
+        <a href="/#pricing">Premium</a>
+        <a href="/#my-work">Work</a>
+        <a href="/#about">About</a>
+        <a href="/#process">Process</a>
+        <a href="/#contact">Get a quote</a>
+      </nav>
+    </div>
+
+    <div class="foot-col">
+      <p class="foot-heading">Contact</p>
+      <ul class="foot-contact">
+        <li><a href="tel:+18186972215">(818) 697-2215</a></li>
+        <li><a href="mailto:snositewebdesign@gmail.com">snositewebdesign@gmail.com</a></li>
+        <li>Los Angeles County, CA</li>
+        <li><a href="https://snosite.com">snosite.com</a></li>
+        <li><a href="https://www.instagram.com/snositewebdesign/?hl=en" target="_blank" rel="noopener"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>Instagram</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61593627805856" target="_blank" rel="noopener"><svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <p class="copy">© <span id="year"></span> SnoSite · Los Angeles, CA · All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
