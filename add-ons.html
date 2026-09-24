@@ -441,12 +441,66 @@
 </section>
 </div>
 
-<!-- ============ CTA ============ -->
-<div class="ao-cta">
-  <h2 class="reveal">Ready to build yours?</h2>
-  <p class="reveal">Tell us about your business and we'll put together exactly what you need.</p>
-  <a class="btn reveal" href="/#contact">Get a free quote</a>
-</div>
+<!-- ============ CONTACT ============ -->
+<section class="section band" id="contact">
+  <div class="contact-grid">
+    <div class="reveal">
+      <p class="eyebrow">Get a quote</p>
+      <h2>Let's work <em>together</em></h2>
+      <p class="section-sub">
+        Tell us about your business. We'll reply with what we'd build, what it
+        costs, and how long it takes.
+      </p>
+
+      <ul class="direct">
+        <li>
+          <span class="direct-k">Phone</span>
+          <a href="tel:+18186972215">(818) 697-2215</a>
+        </li>
+        <li>
+          <span class="direct-k">Email</span>
+          <a href="mailto:snositewebdesign@gmail.com">snositewebdesign@gmail.com</a>
+        </li>
+        <li>
+          <span class="direct-k">Area</span>
+          <span>Los Angeles County</span>
+        </li>
+        <li>
+          <span class="direct-k">Instagram</span>
+          <a href="https://www.instagram.com/snositewebdesign/?hl=en" target="_blank" rel="noopener"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>@snositewebdesign</a>
+        </li>
+        <li>
+          <span class="direct-k">Facebook</span>
+          <a href="https://www.facebook.com/profile.php?id=61593627805856" target="_blank" rel="noopener"><svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>SnoSite</a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="form reveal" id="quoteForm" action="https://formspree.io/f/mqerpqla" method="POST">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+      </div>
+      <div class="field">
+        <label for="phone">Phone <span class="opt">optional</span></label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" />
+      </div>
+      <div class="field">
+        <label for="business">Business</label>
+        <input id="business" name="business" type="text" required />
+      </div>
+      <div class="field">
+        <label for="details">What do you need?</label>
+        <textarea id="details" name="details" rows="4" required></textarea>
+      </div>
+      <button class="btn btn-block" type="submit">Send it over</button>
+    </form>
+  </div>
+</section>
 
 </main>
 
