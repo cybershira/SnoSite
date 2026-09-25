@@ -227,6 +227,21 @@
   line-height:1.65;
 }
 
+.back-home{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--body);
+  font-size:13px;
+  color:var(--slate);
+  text-decoration:none;
+  letter-spacing:.02em;
+  transition:color .2s, gap .2s;
+}
+.back-home:hover{ color:var(--ice); gap:12px; }
+.back-home svg{ width:16px; height:16px; flex-shrink:0; transition:transform .2s; }
+.back-home:hover svg{ transform:translateX(-3px); }
+
 @media(max-width:680px){
   .base-card{ padding:28px 24px; gap:24px; }
   .ao-section{ padding:52px var(--gut); }
@@ -286,8 +301,15 @@
 
 <main>
 
+<div style="max-width:var(--max);margin:0 auto;padding:100px var(--gut) 0">
+  <a class="back-home reveal" href="/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Back to home
+  </a>
+</div>
+
 <!-- ============ SECTION 1: BASE ============ -->
-<section class="ao-section" style="padding-top:140px">
+<section class="ao-section">
   <div class="ao-section-head reveal">
     <span class="ao-section-num">01</span>
     <h2 class="ao-section-title">Your Base</h2>
@@ -501,6 +523,13 @@
     </form>
   </div>
 </section>
+
+<div style="max-width:var(--max);margin:0 auto;padding:32px var(--gut) 48px">
+  <a class="back-home reveal" href="/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Back to home
+  </a>
+</div>
 
 </main>
 
